@@ -2,6 +2,7 @@ package com.example.pruebaenlacegs;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
 import com.example.pruebaenlacegs.clases.Cliente;
+
+import java.util.regex.Pattern;
 
 
 public class AgregarFragment extends Fragment {
@@ -86,7 +89,7 @@ public class AgregarFragment extends Fragment {
 
                 }else if(dui.toCharArray().length<8|| telefono.getText().toString().toCharArray().length<8) {
                     Toast.makeText(requireActivity(),"verifique su Numero de dui o su numero de telefono ",Toast.LENGTH_LONG).show();
-                    }else{
+                    } else{
 
                         Cliente cliente=new Cliente(Integer.parseInt(dui),nombre,apellido,nit,direc,tel,corre);
                         try {
@@ -128,6 +131,10 @@ public class AgregarFragment extends Fragment {
         direccion.setText("");
         telefono.setText("");
         correo.setText("");
+    }
+    private boolean validarEmail(String email) {
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+        return pattern.matcher(email).matches();
     }
 
 
