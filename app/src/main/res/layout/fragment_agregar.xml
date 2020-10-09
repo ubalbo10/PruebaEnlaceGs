@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dip"
+    android:stretchColumns="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregue Los datos del cliente:"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TableRow>
+
+        <TextView android:text="Nombres:" />
+
+        <EditText
+            android:id="@+id/editnombres"
+            android:inputType="text"
+            android:maxLength="100" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="Apellidos:" />
+
+        <EditText
+            android:id="@+id/editapellidos"
+            android:inputType="text"
+            android:maxLength="100" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="DUI:" />
+
+        <EditText
+            android:id="@+id/editdui"
+            android:inputType="number"
+            android:maxLength="9" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="NIT:" />
+
+        <EditText
+            android:id="@+id/editnit"
+            android:inputType="text"
+            android:maxLength="15" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="direccion:" />
+
+        <EditText
+            android:id="@+id/editdireccion"
+            android:inputType="text"
+            android:maxLength="300" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="Telefono:" />
+
+        <EditText
+            android:id="@+id/edittelefono"
+            android:inputType="number"
+            android:maxLength="8" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="Correo:" />
+
+        <EditText
+            android:id="@+id/editcorreo"
+            android:inputType="textEmailAddress"
+            android:maxLength="100" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button_aceptar_editarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/boton_redondeado_verde"
+            android:text="Aceptar"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button_limpiar_editarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/boton_redondeado_secundario"
+            android:text="Limpiar" />
+    </LinearLayout>
+</TableLayout>
+</ScrollView>

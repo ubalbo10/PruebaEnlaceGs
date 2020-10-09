@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView_item"
+                android:layout_width="161dp"
+                android:layout_height="161dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_telefono"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cliente"
+                tools:srcCompat="@drawable/cliente" />
+
+            <TextView
+                android:id="@+id/item_telefono"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/item_correo"
+                app:layout_constraintStart_toStartOf="@+id/item_nit"
+                app:layout_constraintTop_toBottomOf="@+id/item_nit" />
+
+            <TextView
+                android:id="@+id/item_correo"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_item"
+                app:layout_constraintStart_toStartOf="@+id/item_telefono"
+                app:layout_constraintTop_toBottomOf="@+id/item_telefono" />
+
+            <TextView
+                android:id="@+id/item_nombre"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/item_apellidos"
+                app:layout_constraintStart_toEndOf="@+id/imageView_item"
+                app:layout_constraintTop_toTopOf="@+id/imageView_item" />
+
+            <TextView
+                android:id="@+id/item_apellidos"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/item_dui"
+                app:layout_constraintStart_toStartOf="@+id/item_nombre"
+                app:layout_constraintTop_toBottomOf="@+id/item_nombre" />
+
+            <TextView
+                android:id="@+id/item_dui"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/item_nit"
+                app:layout_constraintStart_toStartOf="@+id/item_apellidos"
+                app:layout_constraintTop_toBottomOf="@+id/item_apellidos" />
+
+            <TextView
+                android:id="@+id/item_nit"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/item_telefono"
+                app:layout_constraintStart_toStartOf="@+id/item_dui"
+                app:layout_constraintTop_toBottomOf="@+id/item_dui" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

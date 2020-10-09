@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:stretchColumns="1"
+        app:layout_constraintGuide_percent="0.24897401" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:text="Editar Cliente"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Buscar"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:background="@drawable/boton_redondeado_verde"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edit_buscardui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="DUI del cliente"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/button_buscar"
+        app:layout_constraintStart_toEndOf="@+id/button_buscar"
+        app:layout_constraintTop_toTopOf="@+id/button_buscar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <TableRow>
+
+            <TextView android:text="Nombres" />
+
+            <EditText
+                android:id="@+id/edit_editarnombres"
+                android:inputType="text"
+                android:maxLength="100" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Apellidos" />
+
+            <EditText
+                android:id="@+id/edit_editarapellidos"
+                android:layout_width="340dp"
+                android:inputType="text"
+                android:maxLength="100" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="DUI" />
+
+            <EditText
+                android:id="@+id/edit_editardui"
+                android:inputType="number"
+                android:maxLength="100" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="NIT" />
+
+            <EditText
+                android:id="@+id/edit_editarnit"
+                android:inputType="text"
+                android:maxLength="100" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="direccion" />
+
+            <EditText
+                android:id="@+id/editd_editardireccion"
+                android:inputType="text"
+                android:maxLength="300" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Telefono" />
+
+            <EditText
+                android:id="@+id/edit_editartelefono"
+                android:inputType="number"
+                android:maxLength="8" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Correo" />
+
+            <EditText
+                android:id="@+id/edit_editarcorreo"
+                android:inputType="textEmailAddress"
+                android:maxLength="100" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button_aceptar_editarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/boton_redondeado_verde"
+
+
+                android:text="Aceptar" />
+
+            <Button
+                android:id="@+id/button_limpiar_editarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/boton_redondeado_secundario"
+                android:text="Limpiar" />
+        </LinearLayout>
+
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

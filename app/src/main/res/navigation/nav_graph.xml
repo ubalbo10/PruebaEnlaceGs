@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.pruebaenlacegs.MenuFragment"
+        android:label="menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_hacia_listarClienteFragment"
+            app:destination="@id/listarClienteFragment" />
+        <action
+            android:id="@+id/action_menuFragment_hacia_agregarFragment"
+            app:destination="@id/agregarFragment" />
+        <action
+            android:id="@+id/action_menuFragment_hacia_eliminarFragment"
+            app:destination="@id/eliminarFragment" />
+        <action
+            android:id="@+id/action_menuFragment_hacia_editarFragment"
+            app:destination="@id/editarFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarFragment"
+        android:name="com.example.pruebaenlacegs.AgregarFragment"
+        android:label="agregar"
+        tools:layout="@layout/fragment_agregar" />
+    <fragment
+        android:id="@+id/listarClienteFragment"
+        android:name="com.example.pruebaenlacegs.ListarClienteFragment"
+        android:label="listar_cliente"
+        tools:layout="@layout/fragment_listar_cliente" />
+    <fragment
+        android:id="@+id/editarFragment"
+        android:name="com.example.pruebaenlacegs.EditarFragment"
+        android:label="editar"
+        tools:layout="@layout/fragment_editar" />
+    <fragment
+        android:id="@+id/eliminarFragment"
+        android:name="com.example.pruebaenlacegs.EliminarFragment"
+        android:label="eliminar"
+        tools:layout="@layout/fragment_eliminar" />
+</navigation>
